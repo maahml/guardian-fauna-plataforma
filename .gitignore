@@ -1,0 +1,12 @@
+node_modules/
+frontend/node_modules/
+.env
+dist/
+build/
+.venv-streamlit/
+/.streamlit/secrets.toml
+__pycache__/
+*.py[cod]
+acquahost.txt
+backend/*.local.json
+backend/*.local.txt

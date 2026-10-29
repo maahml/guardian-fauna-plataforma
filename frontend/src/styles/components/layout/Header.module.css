@@ -1,0 +1,125 @@
+/* Cabeçalho para telas pequenas */
+.header {
+  height: 60px;
+  background-color: var(--color-bg-card);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  color: var(--color-text-main);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.menuButton:hover {
+  background-color: var(--color-bg-surface);
+}
+
+.statusBadge {
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  background-color: rgba(5, 150, 105, 0.2);
+  color: #34d399;
+  border-radius: 4px;
+  font-weight: 600;
+  display: none; /* Escondido no celular para liberar espaço */
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.userName {
+  max-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.userRole {
+  display: none; /* Escondido em telas pequenas */
+  font-size: 0.75rem;
+  background-color: var(--color-bg-surface);
+  padding: 2px 8px;
+  border-radius: 999px;
+  color: #38bdf8;
+  border: 1px solid var(--color-border);
+}
+
+.logoutButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: var(--color-danger);
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.logoutButton:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.logoutText {
+  display: none;
+}
+
+/* Cabeçalho para tablets e computadores */
+@media (min-width: 768px) {
+  .header {
+    height: 64px;
+    padding: 0 24px;
+    position: static;
+  }
+
+  .menuButton {
+    display: none; /* Esconde o botão do menu em telas maiores */
+  }
+
+  .statusBadge {
+    display: inline-block;
+  }
+
+  .userName {
+    max-width: none;
+  }
+
+  .userRole {
+    display: inline-block;
+  }
+
+  .logoutText {
+    display: inline;
+  }
+}
